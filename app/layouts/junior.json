@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "level": "junior",
+  "source": {
+    "folder": "app/assets/reference-resumes/Entry_level",
+    "filesUsed": ["app/assets/reference-resumes/Entry_level/SA_Resume.docx", "app/assets/reference-resumes/Entry_level/SA_Resume.pdf", "app/assets/reference-resumes/Intern_Resume/Sandeeb_A_Resume.pdf"],
+    "derivation": "Derived variant between the entry-level and intern layouts because no dedicated junior folder exists.",
+    "contentPolicy": "Use the source files as layout and writing-style references only. Junior content should be generated from the JD and candidate data."
+  },
+  "page": {
+    "size": "letter",
+    "targetPages": 2,
+    "margins": {
+      "top": "0.45in",
+      "right": "0.55in",
+      "bottom": "0.45in",
+      "left": "0.55in"
+    },
+    "density": "compact junior engineer layout with skills near the top"
+  },
+  "typography": {
+    "primaryFont": "Times New Roman",
+    "fallbackFonts": ["Aptos", "Arial"],
+    "bodyFontSize": "10pt",
+    "bodyLineHeight": "1.15",
+    "sectionHeadingFontSize": "10.5pt",
+    "sectionHeadingWeight": "bold",
+    "sectionHeadingCase": "uppercase",
+    "bulletFontSize": "10pt"
+  },
+  "header": {
+    "position": "top of first page",
+    "alignment": "center",
+    "usesBullets": false,
+    "bottomBorder": false,
+    "lineOrder": ["name", "location", "contact"],
+    "name": {
+      "fontSize": "18pt",
+      "fontWeight": "bold",
+      "case": "title",
+      "alignment": "center"
+    },
+    "location": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center"
+    },
+    "contact": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "separator": " | ",
+      "items": ["phone", "email", "portfolio", "linkedin"],
+      "linkStyle": "plain text URL"
+    },
+    "spacing": {
+      "afterName": "2pt",
+      "afterLocation": "2pt",
+      "afterHeader": "8pt"
+    }
+  },
+  "sectionOrder": [
+    "summary",
+    "skills",
+    "experience",
+    "projects",
+    "education"
+  ],
+  "sections": {
+    "summary": {
+      "heading": "SUMMARY",
+      "format": "single paragraph",
+      "targetLength": "3-4 lines",
+      "writingStyle": "junior engineer with hands-on delivery, debugging, APIs, tests, cloud exposure, and growing ownership",
+      "include": ["primary stack", "1-3 years style responsibility", "APIs or frontend/backend focus", "debugging/testing", "deployment or cloud exposure"],
+      "avoid": ["intern-only coursework language", "senior architecture ownership", "mentoring claims"]
+    },
+    "skills": {
+      "heading": "SKILLS",
+      "position": "near top for ATS",
+      "format": "category lines",
+      "categories": ["Languages", "Backend", "Frontend", "Databases", "Cloud & Tools", "Testing"],
+      "writingStyle": "shorter than senior skills; only include tools that support the JD"
+    },
+    "experience": {
+      "heading": "EXPERIENCE",
+      "entryFormat": ["title", "companyAndLocation", "dates", "bullets"],
+      "bulletCount": "6-8 for current role, 4-5 for previous role",
+      "bulletMarker": "disc",
+      "bulletWriting": {
+        "tone": "growing ownership, production support, implementation",
+        "verbs": ["Developed", "Implemented", "Maintained", "Integrated", "Debugged", "Supported", "Improved", "Collaborated"],
+        "pattern": "Action verb + feature/service + technology + reliability, performance, or user impact",
+        "avoid": ["assistant-only language in every bullet", "principal-level design authority"]
+      }
+    },
+    "projects": {
+      "heading": "PROJECTS",
+      "importance": "medium",
+      "projectCount": "2-3",
+      "bulletCount": "2-4 per project",
+      "writingStyle": "include projects when they fill JD gaps or show depth not covered by experience"
+    },
+    "education": {
+      "heading": "EDUCATION",
+      "position": "bottom",
+      "format": "University - City, ST | Degree",
+      "writingStyle": "brief; coursework optional only if strongly JD-relevant"
+    }
+  },
+  "aiInstructions": {
+    "layoutPriority": "Use skills before experience to improve ATS scanning for junior roles.",
+    "contentGeneration": "Generate junior-level content with implementation ownership but not senior architecture claims.",
+    "jdTailoring": "Use projects to fill missing JD keywords only when work experience does not cover them.",
+    "outputRequirement": "Return structured resume JSON matching this blueprint; do not return markdown."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0",
+  "level": "intern",
+  "source": {
+    "folder": "app/assets/reference-resumes/Intern_Resume",
+    "filesUsed": ["app/assets/reference-resumes/Intern_Resume/Sandeeb_A_Resume.pdf"],
+    "derivation": "Directly derived from the internship resume layout.",
+    "contentPolicy": "Use this file as layout and writing-style reference only. Do not copy identity, links, project claims, company names, dates, or education unless separately supplied as candidate data."
+  },
+  "page": {
+    "size": "letter",
+    "targetPages": 2,
+    "margins": {
+      "top": "0.45in",
+      "right": "0.55in",
+      "bottom": "0.45in",
+      "left": "0.55in"
+    },
+    "density": "moderate project-heavy student layout"
+  },
+  "typography": {
+    "primaryFont": "Times New Roman",
+    "fallbackFonts": ["Arial"],
+    "bodyFontSize": "10pt",
+    "bodyLineHeight": "1.15",
+    "sectionHeadingFontSize": "10.5pt",
+    "sectionHeadingWeight": "bold",
+    "sectionHeadingCase": "uppercase",
+    "bulletFontSize": "10pt"
+  },
+  "header": {
+    "position": "top of first page",
+    "alignment": "center",
+    "usesBullets": false,
+    "bottomBorder": false,
+    "lineOrder": ["name", "location", "contact"],
+    "name": {
+      "fontSize": "18pt",
+      "fontWeight": "bold",
+      "case": "title",
+      "alignment": "center"
+    },
+    "location": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center"
+    },
+    "contact": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "separator": " | ",
+      "items": ["phone", "email", "portfolio"],
+      "linkStyle": "plain text URL"
+    },
+    "spacing": {
+      "afterName": "2pt",
+      "afterLocation": "2pt",
+      "afterHeader": "8pt"
+    }
+  },
+  "sectionOrder": [
+    "summary",
+    "education",
+    "workExperience",
+    "technicalProjects",
+    "keySkills",
+    "certifications",
+    "links"
+  ],
+  "sections": {
+    "summary": {
+      "heading": "SUMMARY",
+      "format": "single paragraph",
+      "targetLength": "2-4 lines",
+      "writingStyle": "student or early-career positioning; emphasize projects, coursework, practical tools, AI or software workflows, and ability to learn quickly",
+      "avoid": ["senior ownership language", "enterprise architecture claims", "team leadership claims unless supplied"]
+    },
+    "education": {
+      "heading": "EDUCATION",
+      "position": "early, before work experience",
+      "format": "school, location, degree, relevant coursework",
+      "coursework": {
+        "includeWhenRelevant": true,
+        "style": "comma-separated list spanning one or two lines"
+      },
+      "writingStyle": "make education visible because internship resumes rely on school context"
+    },
+    "workExperience": {
+      "heading": "WORK EXPERIENCE",
+      "entryFormat": ["company", "title", "locationAndDates", "bullets"],
+      "companyLine": {
+        "fontWeight": "bold",
+        "alignment": "left"
+      },
+      "titleLine": {
+        "fontWeight": "regular",
+        "alignment": "left"
+      },
+      "dateLocationLine": {
+        "format": "Location | Month YYYY - Present",
+        "alignment": "left"
+      },
+      "bulletCount": "4-6 per role",
+      "bulletMarker": "disc",
+      "bulletWriting": {
+        "tone": "hands-on, contribution-oriented, precise",
+        "verbs": ["Built", "Implemented", "Designed", "Debugged", "Evaluated", "Authored", "Collaborated", "Documented"],
+        "pattern": "Action verb + technical task + tool or method + result or purpose",
+        "avoid": ["Led large teams", "owned architecture", "reduced costs by unsupported numbers"]
+      }
+    },
+    "technicalProjects": {
+      "heading": "TECHNICAL PROJECTS",
+      "importance": "high",
+      "projectCount": "3-5",
+      "entryFormat": ["projectNameAndDescriptor", "organizationOrYear", "optionalLinks", "bullets"],
+      "bulletCount": "4-6 per major project, 3-4 per smaller project",
+      "writingStyle": "projects should prove the JD skills with concrete implementation details, repositories, tools, and debugging work"
+    },
+    "keySkills": {
+      "heading": "KEY SKILLS",
+      "format": "category lines",
+      "categories": ["Language", "Frontend", "Backend", "Databases", "Cloud & Tools", "AI & Tooling"],
+      "writingStyle": "compact, ATS-readable, strongest JD matches first within each category"
+    },
+    "certifications": {
+      "heading": "CERTIFICATIONS",
+      "format": "bulleted list",
+      "includeWhenAvailable": true,
+      "writingStyle": "include only relevant certifications or training links"
+    },
+    "links": {
+      "heading": "LINKS",
+      "format": "bulleted list",
+      "items": ["GitHub", "LinkedIn", "Portfolio"],
+      "writingStyle": "place extra links here rather than overloading the header"
+    }
+  },
+  "aiInstructions": {
+    "layoutPriority": "Follow this section order and header structure exactly.",
+    "contentGeneration": "Generate internship-level content that sounds capable but not senior.",
+    "jdTailoring": "Move JD-matching projects and skills higher. Keep education and projects prominent.",
+    "outputRequirement": "Return structured resume JSON matching this blueprint; do not return markdown."
+  }
+}

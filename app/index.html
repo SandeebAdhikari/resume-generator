@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume Tailor</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Resume tailoring workspace">
+        <aside class="controls">
+          <div class="brand-row">
+            <div>
+              <h1>Resume Tailor</h1>
+              <p>Paste a job description, generate an ATS-friendly resume draft, then export it as PDF.</p>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Resume level</span>
+            <select id="resumeLevel">
+              <option value="auto" selected>Auto-detect from JD</option>
+              <option value="intern">Internship resume</option>
+              <option value="entry">Entry-level resume</option>
+              <option value="junior">Junior resume</option>
+              <option value="midlevel">Mid-level resume</option>
+              <option value="senior">Senior software resume</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Job description</span>
+            <textarea id="jobDescription" rows="16" placeholder="Paste the full JD here..."></textarea>
+          </label>
+
+          <div class="button-row">
+            <button id="generateBtn" class="primary" type="button">Generate Resume</button>
+            <button id="printBtn" type="button">Export PDF</button>
+          </div>
+
+          <div class="button-row">
+            <button id="copyBtn" type="button">Copy Resume Text</button>
+            <button id="resetBtn" type="button">Reset</button>
+          </div>
+
+          <label class="field">
+            <span>Ask AI to revise</span>
+            <textarea id="revisionInstructions" rows="5" placeholder="Example: Add more AWS and Kafka skills to the second experience."></textarea>
+          </label>
+
+          <div class="button-row single">
+            <button id="reviseBtn" type="button">Revise Resume</button>
+          </div>
+
+          <section class="panel" aria-label="Keyword match">
+            <div class="panel-heading">
+              <h2>JD Match</h2>
+              <span id="matchScore">0%</span>
+            </div>
+            <div id="keywordChips" class="chips"></div>
+          </section>
+
+          <section class="panel" aria-label="Tailoring notes">
+            <h2>Tailoring Notes</h2>
+            <ul id="tailoringNotes"></ul>
+          </section>
+        </aside>
+
+        <section class="preview-wrap" aria-label="Resume preview">
+          <div class="preview-toolbar">
+            <span>Editable preview</span>
+            <span>Use Export PDF when ready</span>
+          </div>
+          <article id="resumePreview" class="resume-page" contenteditable="true" spellcheck="true"></article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

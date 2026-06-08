@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0",
+  "level": "senior",
+  "source": {
+    "folder": "app/assets/reference-resumes/Senior_Resume",
+    "filesUsed": [
+      "app/assets/reference-resumes/Senior_Resume/SandeebAdhikari_Resume.docx",
+      "app/assets/reference-resumes/Senior_Resume/SandeebAdhikari_Resume.pdf",
+      "app/assets/reference-resumes/Senior_Resume/Risahb Chandra - Sr. Java Developer.pdf",
+      "app/assets/reference-resumes/Senior_Resume/Yashwanth Giri - Sr. Full Stack Java Developer.pdf"
+    ],
+    "derivation": "Primary layout derived from SandeebAdhikari_Resume. Additional senior PDFs inform optional consulting-style density and writing conventions.",
+    "contentPolicy": "Use these files as layout and writing-style references only. Do not copy identity, company names, client names, dates, metrics, or project claims unless separately supplied as candidate data."
+  },
+  "page": {
+    "size": "letter",
+    "targetPages": 2,
+    "alternateTargetPages": "5-6 pages only for consulting/vendor-style resumes",
+    "margins": {
+      "top": "0.4in",
+      "right": "0.5in",
+      "bottom": "0.4in",
+      "left": "0.5in"
+    },
+    "density": "dense senior enterprise layout"
+  },
+  "typography": {
+    "primaryFont": "Times New Roman",
+    "secondaryFont": "Cambria",
+    "fallbackFonts": ["Arial"],
+    "bodyFontSize": "9.5-10pt",
+    "bodyLineHeight": "1.1",
+    "sectionHeadingFontSize": "10.5-11pt",
+    "sectionHeadingWeight": "bold",
+    "sectionHeadingCase": "title case for primary resume, uppercase acceptable for consulting-style variant",
+    "bulletFontSize": "9.5-10pt"
+  },
+  "header": {
+    "position": "top of first page",
+    "alignment": "center",
+    "usesBullets": false,
+    "bottomBorder": false,
+    "lineOrder": ["name", "targetTitle", "contact"],
+    "name": {
+      "fontSize": "20-22pt",
+      "fontWeight": "bold",
+      "case": "uppercase",
+      "alignment": "center"
+    },
+    "targetTitle": {
+      "fontSize": "11-12pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "includeWhenKnown": true
+    },
+    "contact": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "separator": " | ",
+      "items": ["email", "phone", "location", "portfolio", "linkedin"],
+      "linkStyle": "plain text URL"
+    },
+    "spacing": {
+      "afterName": "2pt",
+      "afterTitle": "2pt",
+      "afterHeader": "8pt"
+    }
+  },
+  "sectionOrder": [
+    "professionalSummary",
+    "education",
+    "workExperience",
+    "projects",
+    "skills"
+  ],
+  "alternateConsultingSectionOrder": [
+    "professionalSummary",
+    "technicalSkills",
+    "workExperience"
+  ],
+  "sections": {
+    "professionalSummary": {
+      "heading": "Professional Summary",
+      "format": "two compact paragraphs for primary senior layout; bullet summary allowed for consulting-style senior layout",
+      "targetLength": "6-10 lines",
+      "writingStyle": "enterprise senior engineer tone with architecture, scalable systems, secure APIs, cloud, CI/CD, distributed systems, code reviews, delivery ownership, and mentoring",
+      "include": ["years of experience", "target role", "core stack", "system architecture", "cloud/devops", "security or reliability", "leadership or mentoring"],
+      "avoid": ["student/coursework language", "generic objective statement", "unsupported extreme metrics"]
+    },
+    "education": {
+      "heading": "Education",
+      "position": "early in primary senior layout",
+      "format": "University | Degree | Major",
+      "writingStyle": "one compact line"
+    },
+    "workExperience": {
+      "heading": "Work Experience",
+      "entryFormat": ["companyAndLocation", "titleAndDates", "bullets", "environment"],
+      "companyLine": {
+        "format": "Company [tab/space] Location",
+        "fontWeight": "bold",
+        "alignment": "left with location right or same line"
+      },
+      "titleDateLine": {
+        "format": "Title [tab/space] Dates",
+        "fontWeight": "regular",
+        "alignment": "left with dates right or same line"
+      },
+      "bulletCount": "12-16 for most recent senior role, 8-11 for previous role, 7-10 for older role",
+      "bulletMarker": "disc",
+      "environmentLine": {
+        "includeWhenUseful": true,
+        "format": "Environment: comma-separated technologies",
+        "fontSize": "9.5-10pt",
+        "placement": "after bullets for each role"
+      },
+      "bulletWriting": {
+        "tone": "senior ownership, architecture, delivery, security, scalability, collaboration",
+        "verbs": ["Led", "Designed", "Architected", "Developed", "Implemented", "Optimized", "Integrated", "Owned", "Automated", "Mentored", "Collaborated", "Secured"],
+        "pattern": "Action verb + system/platform/service + technologies + scale/security/reliability/business outcome",
+        "includeCommonThemes": ["microservices", "RESTful APIs", "cloud infrastructure", "containerization", "CI/CD", "event streaming", "database optimization", "observability", "testing", "Agile collaboration"],
+        "avoid": ["entry-level assistant language", "coursework-first bullets", "copying metrics from reference resumes"]
+      }
+    },
+    "projects": {
+      "heading": "Projects",
+      "importance": "medium",
+      "projectCount": "2-3",
+      "format": "project heading followed by compact paragraph or 2-3 bullets",
+      "writingStyle": "business/system-heavy project descriptions tied to major employers or target domain"
+    },
+    "skills": {
+      "heading": "Skills",
+      "format": "dense category lines",
+      "categories": [
+        "Programming Languages",
+        "IDE Tools",
+        "Web/App/DB Servers",
+        "Web Services",
+        "Web Development",
+        "Cloud Technologies",
+        "NoSQL Databases",
+        "Relational Databases",
+        "Tools",
+        "Build and Testing Tools",
+        "Logging and Monitoring Tools",
+        "Web Technologies",
+        "Version Controls",
+        "Methodologies and Practices"
+      ],
+      "writingStyle": "ATS-heavy, broad, and grouped; JD-critical technologies should appear early in their categories"
+    },
+    "technicalSkillsConsultingVariant": {
+      "heading": "TECHNICAL SKILLS",
+      "format": "table-like category/value rows",
+      "useWhen": "the selected senior layout style is consulting/vendor resume",
+      "writingStyle": "very dense categories including programming, frontend, backend, messaging, databases, cloud, DevOps, monitoring, testing"
+    }
+  },
+  "aiInstructions": {
+    "layoutPriority": "Default to the primary senior section order unless the user chooses consulting-style output.",
+    "contentGeneration": "Generate senior-level content with architecture and ownership depth. Keep generated claims consistent with the selected candidate mode.",
+    "jdTailoring": "Use the JD to decide which senior themes dominate: Java microservices, full-stack UI, cloud, data streaming, DevOps, security, compliance, or observability.",
+    "outputRequirement": "Return structured resume JSON matching this blueprint; do not return markdown."
+  }
+}

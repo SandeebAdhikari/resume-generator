@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0",
+  "level": "entry",
+  "source": {
+    "folder": "app/assets/reference-resumes/Entry_level",
+    "filesUsed": ["app/assets/reference-resumes/Entry_level/SA_Resume.docx", "app/assets/reference-resumes/Entry_level/SA_Resume.pdf"],
+    "derivation": "Directly derived from the entry-level backend/software resume layout.",
+    "contentPolicy": "Use this file as layout and writing-style reference only. Do not copy identity, company names, dates, or project claims unless separately supplied as candidate data."
+  },
+  "page": {
+    "size": "letter",
+    "targetPages": 2,
+    "margins": {
+      "top": "0.45in",
+      "right": "0.55in",
+      "bottom": "0.45in",
+      "left": "0.55in"
+    },
+    "density": "compact early-career layout with balanced experience and projects"
+  },
+  "typography": {
+    "primaryFont": "Times New Roman",
+    "secondaryFont": "Aptos",
+    "fallbackFonts": ["Arial"],
+    "bodyFontSize": "10pt",
+    "bodyLineHeight": "1.15",
+    "sectionHeadingFontSize": "10.5pt",
+    "sectionHeadingWeight": "bold",
+    "sectionHeadingCase": "uppercase",
+    "bulletFontSize": "10pt"
+  },
+  "header": {
+    "position": "top of first page",
+    "alignment": "center",
+    "usesBullets": false,
+    "bottomBorder": false,
+    "lineOrder": ["name", "location", "contact"],
+    "name": {
+      "fontSize": "18pt",
+      "fontWeight": "bold",
+      "case": "title",
+      "alignment": "center"
+    },
+    "location": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center"
+    },
+    "contact": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "separator": " | ",
+      "items": ["phone", "email", "portfolio"],
+      "linkStyle": "plain text URL"
+    },
+    "spacing": {
+      "afterName": "2pt",
+      "afterLocation": "2pt",
+      "afterHeader": "8pt"
+    }
+  },
+  "sectionOrder": [
+    "summary",
+    "experience",
+    "technicalProjects",
+    "skills",
+    "education"
+  ],
+  "sections": {
+    "summary": {
+      "heading": "SUMMARY",
+      "format": "single paragraph",
+      "targetLength": "3-5 lines",
+      "writingStyle": "practical early-career engineer summary focused on backend APIs, automation, debugging, databases, cloud tools, and production-style workflows",
+      "include": ["target role", "primary languages", "backend stack", "databases", "cloud or deployment tools", "reliability/debugging angle"],
+      "avoid": ["executive tone", "large-scale leadership claims", "too many buzzwords without implementation context"]
+    },
+    "experience": {
+      "heading": "EXPERIENCE",
+      "entryFormat": ["title", "companyAndLocation", "dates", "bullets"],
+      "titleLine": {
+        "fontWeight": "bold",
+        "alignment": "left"
+      },
+      "companyLine": {
+        "format": "Company - City, ST",
+        "alignment": "left"
+      },
+      "dateLine": {
+        "format": "Month YYYY - Present",
+        "alignment": "left"
+      },
+      "bulletCount": "5-8 for primary role, 4-5 for internship or secondary role",
+      "bulletMarker": "disc",
+      "bulletWriting": {
+        "tone": "hands-on, implementation-focused, support-oriented",
+        "verbs": ["Developed", "Assisted", "Built", "Wrote", "Supported", "Integrated", "Debugged", "Contributed", "Participated"],
+        "pattern": "Action verb + component/workflow + technology + practical outcome",
+        "avoid": ["architected enterprise platform", "mentored teams", "owned roadmap"]
+      }
+    },
+    "technicalProjects": {
+      "heading": "TECHNICAL PROJECTS",
+      "importance": "high",
+      "projectCount": "2-3",
+      "entryFormat": ["projectName", "bullets"],
+      "bulletCount": "3-4 per project",
+      "writingStyle": "use projects to show depth beyond limited work experience; emphasize concrete systems, APIs, automation, testing, and debugging"
+    },
+    "skills": {
+      "heading": "SKILLS",
+      "format": "category lines",
+      "categories": ["Languages", "Backend", "Databases", "Cloud & Infrastructure", "AI & Automation", "Security & Reliability"],
+      "writingStyle": "compact categories; JD-matching skills first; avoid listing unrelated tools"
+    },
+    "education": {
+      "heading": "EDUCATION",
+      "position": "bottom",
+      "format": "University - City, ST | Degree",
+      "writingStyle": "brief because entry-level layout gives more space to experience and projects"
+    }
+  },
+  "aiInstructions": {
+    "layoutPriority": "Use the entry-level section order and do not move education above experience unless the JD is explicitly internship/student-focused.",
+    "contentGeneration": "Generate entry-level content with credible implementation and support language.",
+    "jdTailoring": "Prioritize JD stack in summary, first role bullets, projects, and skills.",
+    "outputRequirement": "Return structured resume JSON matching this blueprint; do not return markdown."
+  }
+}

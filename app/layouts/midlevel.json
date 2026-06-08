@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0",
+  "level": "midlevel",
+  "source": {
+    "folder": "Derived",
+    "filesUsed": ["app/assets/reference-resumes/Entry_level/SA_Resume.docx", "app/assets/reference-resumes/Senior_Resume/SandeebAdhikari_Resume.docx"],
+    "derivation": "Derived midpoint between entry/junior implementation style and senior ownership style because no dedicated mid-level folder exists.",
+    "contentPolicy": "Use source files as layout and writing-style references only. Mid-level content should be generated from the JD and candidate data."
+  },
+  "page": {
+    "size": "letter",
+    "targetPages": 2,
+    "margins": {
+      "top": "0.45in",
+      "right": "0.55in",
+      "bottom": "0.45in",
+      "left": "0.55in"
+    },
+    "density": "ATS-friendly two-page professional layout"
+  },
+  "typography": {
+    "primaryFont": "Times New Roman",
+    "fallbackFonts": ["Cambria", "Arial"],
+    "bodyFontSize": "10pt",
+    "bodyLineHeight": "1.12",
+    "sectionHeadingFontSize": "10.5pt",
+    "sectionHeadingWeight": "bold",
+    "sectionHeadingCase": "title or uppercase",
+    "bulletFontSize": "9.5-10pt"
+  },
+  "header": {
+    "position": "top of first page",
+    "alignment": "center",
+    "usesBullets": false,
+    "bottomBorder": false,
+    "lineOrder": ["name", "targetTitle", "contact"],
+    "name": {
+      "fontSize": "19pt",
+      "fontWeight": "bold",
+      "case": "title or uppercase",
+      "alignment": "center"
+    },
+    "targetTitle": {
+      "fontSize": "11pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "includeWhenKnown": true
+    },
+    "contact": {
+      "fontSize": "10pt",
+      "fontWeight": "regular",
+      "alignment": "center",
+      "separator": " | ",
+      "items": ["email", "phone", "location", "portfolio", "linkedin"],
+      "linkStyle": "plain text URL"
+    },
+    "spacing": {
+      "afterName": "2pt",
+      "afterTitle": "2pt",
+      "afterHeader": "8pt"
+    }
+  },
+  "sectionOrder": [
+    "summary",
+    "skills",
+    "workExperience",
+    "projects",
+    "education"
+  ],
+  "sections": {
+    "summary": {
+      "heading": "Professional Summary",
+      "format": "single paragraph or two compact paragraphs",
+      "targetLength": "4-6 lines",
+      "writingStyle": "independent software engineer with ownership of features, services, APIs, testing, deployment, and production support",
+      "include": ["years of experience", "primary stack", "service or application type", "cloud/devops exposure", "cross-functional delivery"],
+      "avoid": ["student-first language", "principal architect language", "long list of every technology"]
+    },
+    "skills": {
+      "heading": "Skills",
+      "position": "near top",
+      "format": "category lines",
+      "categories": ["Programming Languages", "Backend", "Frontend", "Cloud & DevOps", "Databases", "Testing & Tools"],
+      "writingStyle": "broad enough for ATS but less exhaustive than senior; put JD-critical skills first"
+    },
+    "workExperience": {
+      "heading": "Work Experience",
+      "entryFormat": ["companyAndLocation", "titleAndDates", "bullets", "optionalEnvironment"],
+      "companyLine": {
+        "format": "Company | City, ST",
+        "fontWeight": "bold"
+      },
+      "titleDateLine": {
+        "format": "Title | Month YYYY - Month YYYY",
+        "fontStyle": "italic optional"
+      },
+      "bulletCount": "7-9 for current role, 5-7 for previous role, 3-5 for older role",
+      "bulletMarker": "disc",
+      "environmentLine": {
+        "includeWhenUseful": true,
+        "format": "Environment: comma-separated stack",
+        "length": "one compact line"
+      },
+      "bulletWriting": {
+        "tone": "ownership without overstating senior leadership",
+        "verbs": ["Designed", "Developed", "Implemented", "Optimized", "Integrated", "Automated", "Supported", "Improved", "Collaborated"],
+        "pattern": "Action verb + owned feature/service + technology + measurable or concrete outcome",
+        "avoid": ["mentored many engineers unless supplied", "enterprise-wide architecture ownership unless supplied"]
+      }
+    },
+    "projects": {
+      "heading": "Projects",
+      "importance": "medium",
+      "projectCount": "1-2",
+      "bulletCount": "2-3 per project or compact paragraph",
+      "writingStyle": "include projects only if they strengthen JD alignment or demonstrate a target technology"
+    },
+    "education": {
+      "heading": "Education",
+      "position": "bottom",
+      "format": "University | Degree",
+      "writingStyle": "brief"
+    }
+  },
+  "aiInstructions": {
+    "layoutPriority": "Use summary and skills before work experience for ATS alignment.",
+    "contentGeneration": "Generate mid-level content showing independent delivery and ownership of services/features.",
+    "jdTailoring": "Translate JD responsibilities into feature/service bullets without senior-level exaggeration.",
+    "outputRequirement": "Return structured resume JSON matching this blueprint; do not return markdown."
+  }
+}

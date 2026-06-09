@@ -71,6 +71,7 @@ export function analyzeJobDescription(jdText, options = {}) {
     requiredSkills: detectedSkills.slice(0, 12),
     preferredSkills: detectedSkills.slice(12, 24),
     responsibilities: detectResponsibilities(text),
+    allowsMetrics: /\d+(\.\d+)?%|\b99\.\d+\b|\b\d+x\b/i.test(text),
     tokens,
     tokenCount: tokens.length
   };
@@ -163,9 +164,28 @@ function detectResponsibilities(text) {
   return text
     .split(/\n+/)
     .map((line) => cleanupLine(line.replace(/^[-*•]\s*/, "")))
-    .filter((line) => line.length > 35)
+    .filter((line) => line.length >= 35 && line.length <= 220)
     .filter((line) => /\b(design|develop|build|implement|maintain|support|deploy|integrate|collaborate|test|optimize|lead|own)\b/i.test(line))
+    .filter((line) => !isCompanyMarketingLine(line))
+    .filter((line) => !isQualificationLine(line))
     .slice(0, 8);
+}
+
+function isQualificationLine(line) {
+  const normalized = line.toLowerCase();
+  return (
+    /^(solid|strong|proven|excellent|good|deep)\s+(experience|background|knowledge|understanding)\b/.test(normalized) ||
+    /^\d+\+?\s+years?\b/.test(normalized) ||
+    /\b(must have|nice to have|required:|preferred:|bachelor|master's|degree in)\b/.test(normalized)
+  );
+}
+
+function isCompanyMarketingLine(line) {
+  const normalized = line.toLowerCase();
+  return (
+    /\b(about us|we are|our platform|our mission|connects .+ to|frontier ai|talent platform|ai recruiter|domain experts to the development)\b/.test(normalized) ||
+    /\b(micro1|workday|greenhouse|lever)\b/.test(normalized) && normalized.length > 120
+  );
 }
 
 function defaultRoleForLevel(level) {

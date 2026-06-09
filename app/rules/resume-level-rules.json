@@ -13,6 +13,7 @@
     "environmentProgression": "Each work experience entry must have its own environment line. The current/recent role should use the strongest JD-aligned stack. Middle roles should use core implementation tools. Older or junior roles should use a smaller foundational stack. Do not repeat the exact same environment across every job.",
     "noEmptySections": "Do not leave rendered sections empty. If a level has projectCount 0, the projects array must be empty and the renderer may skip it later.",
     "noUnsupportedMetrics": "Do not create percentages, dollar amounts, user counts, latency numbers, uptime claims, or compliance claims unless the JD includes them.",
+    "minimumExperienceBulletsPerEntry": "Every work experience entry must include at least 5 bullets.",
     "skillSectionPrinciple": "Skills should read like a resume technical environment, not a school syllabus. Use specific languages, frameworks, databases, cloud tools, testing tools, DevOps tools, observability tools, security tools, and methodologies appropriate to the detected level."
   },
   "levels": {
@@ -46,9 +47,10 @@
         "maxItemsByEntry": [7]
       },
       "experienceBullets": {
-        "primary": "4-6",
+        "primary": "5-6",
         "older": "0"
       },
+      "minimumBulletsPerEntry": 5,
       "projectBullets": "3-5",
       "writingStyle": {
         "tone": "student, project-heavy, practical, learning-oriented",
@@ -87,8 +89,9 @@
       },
       "experienceBullets": {
         "primary": "6-8",
-        "older": "4-5"
+        "older": "5-6"
       },
+      "minimumBulletsPerEntry": 5,
       "projectBullets": "3-4",
       "writingStyle": {
         "tone": "hands-on implementation, debugging, testing, team contribution",
@@ -129,6 +132,7 @@
         "primary": "7-8",
         "older": "5-6"
       },
+      "minimumBulletsPerEntry": 5,
       "projectBullets": "2-3",
       "writingStyle": {
         "tone": "growing ownership, implementation, production support, maintenance",
@@ -168,8 +172,9 @@
       },
       "experienceBullets": {
         "primary": "8-10",
-        "older": "5-7"
+        "older": "6-8"
       },
+      "minimumBulletsPerEntry": 5,
       "projectBullets": "2-3",
       "writingStyle": {
         "tone": "independent delivery, service ownership, testing, deployment, production support",
@@ -211,6 +216,7 @@
         "primary": "10-14",
         "older": "7-10"
       },
+      "minimumBulletsPerEntry": 5,
       "projectBullets": "2-4",
       "writingStyle": {
         "tone": "architecture, ownership, scalability, security, mentoring, delivery, cross-functional leadership",

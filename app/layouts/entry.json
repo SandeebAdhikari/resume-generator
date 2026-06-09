@@ -91,7 +91,7 @@
         "format": "Month YYYY - Present",
         "alignment": "left"
       },
-      "bulletCount": "5-8 for primary role, 4-5 for internship or secondary role",
+      "bulletCount": "6-8 for primary role, 5-6 for internship or secondary role",
       "bulletMarker": "disc",
       "bulletWriting": {
         "tone": "hands-on, implementation-focused, support-oriented",

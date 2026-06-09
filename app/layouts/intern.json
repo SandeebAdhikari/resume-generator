@@ -101,7 +101,7 @@
         "format": "Location | Month YYYY - Present",
         "alignment": "left"
       },
-      "bulletCount": "4-6 per role",
+      "bulletCount": "5-6 per role",
       "bulletMarker": "disc",
       "bulletWriting": {
         "tone": "hands-on, contribution-oriented, precise",

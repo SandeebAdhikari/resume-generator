@@ -1,8 +1,9 @@
+import { companyPlaceholder, defaultResponsibilities, sentence } from "./resume-content.js";
 import { unique } from "./text-utils.js";
 
 export function generateIdealResumeSchema({ analysis, blueprint }) {
   const matchedSkills = unique([...analysis.requiredSkills, ...analysis.preferredSkills]);
-  const experiences = buildExperienceFromJd(analysis, blueprint, matchedSkills);
+  const experiences = buildExperienceFromJd(analysis, matchedSkills);
 
   return {
     meta: {
@@ -35,19 +36,14 @@ export function generateIdealResumeSchema({ analysis, blueprint }) {
   };
 }
 
-function buildExperienceFromJd(analysis, blueprint, skills) {
-  const limits = getExperienceBulletLimits(blueprint.level);
-  const responsibilities = analysis.responsibilities.length
-    ? analysis.responsibilities
-    : [`Deliver work aligned with ${analysis.targetRole} responsibilities from the job description.`];
-  const primaryBullets = responsibilities.map((responsibility) => sentence(responsibility)).slice(0, limits[0]);
-  const supportBullets = responsibilities
-    .slice(0, limits[1] || 4)
-    .map((responsibility) => sentence(responsibility));
+function buildExperienceFromJd(analysis, skills) {
+  const responsibilities = defaultResponsibilities(analysis);
+  const primaryBullets = responsibilities.map((responsibility) => sentence(responsibility)).slice(0, 8);
+  const supportBullets = responsibilities.slice(0, 4).map((responsibility) => sentence(responsibility));
 
   return [
     {
-      company: analysis.companyName || "Company from JD",
+      company: analysis.companyName || companyPlaceholder(0),
       location: analysis.location || "Location",
       title: analysis.targetRole,
       dates: "Dates",
@@ -55,7 +51,7 @@ function buildExperienceFromJd(analysis, blueprint, skills) {
       bullets: primaryBullets
     },
     {
-      company: "Prior relevant organization",
+      company: companyPlaceholder(1),
       location: analysis.location || "Location",
       title: previousTitleForLevel(analysis.level),
       dates: "Dates",
@@ -66,14 +62,13 @@ function buildExperienceFromJd(analysis, blueprint, skills) {
 }
 
 function buildProjectsFromJd(analysis, skills) {
-  const responsibility = analysis.responsibilities[0] || `${analysis.targetRole} responsibilities`;
+  const responsibility = defaultResponsibilities(analysis)[0];
   return [
     {
-      name: "JD-Aligned Technical Project",
+      name: `${analysis.domain || "Technical"} Platform Enhancement`,
       bullets: [
         sentence(responsibility),
-        skills.length ? `Demonstrates the JD-required stack: ${skills.slice(0, 8).join(", ")}.` : "Demonstrates the technical responsibilities listed in the JD.",
-        "Should be replaced by AI-generated project content once the AI generation stage is connected."
+        skills.length ? `Built with ${skills.slice(0, 6).join(", ")}.` : "Built using core technologies from the role."
       ]
     }
   ];
@@ -91,17 +86,6 @@ function buildIdealSummary(analysis, skills) {
   return `Ideal ${analysis.targetRole} profile generated strictly from the job description${companyPhrase}.${skillPhrase} The AI generation stage should expand this into a polished summary using only the JD and the selected layout blueprint.`;
 }
 
-function getExperienceBulletLimits(level) {
-  const limits = {
-    intern: [6, 5],
-    entry: [8, 5],
-    junior: [8, 6],
-    midlevel: [9, 7, 5],
-    senior: [10, 8, 6]
-  };
-  return limits[level] || limits.midlevel;
-}
-
 function previousTitleForLevel(level) {
   const titles = {
     intern: "Technical Project Contributor",
@@ -111,10 +95,4 @@ function previousTitleForLevel(level) {
     senior: "Software Developer"
   };
   return titles[level] || titles.midlevel;
-}
-
-function sentence(value) {
-  const text = String(value || "").replace(/\s+/g, " ").trim();
-  if (!text) return "";
-  return /[.!?]$/.test(text) ? text : `${text}.`;
 }

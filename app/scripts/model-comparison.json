@@ -1,0 +1,140 @@
+{
+  "jobDescription": "Java Developer\n\nWe are hiring a Java Developer to build scalable healthcare applications.\n\nRequirements:\n- 3+ years of experience with Java and Spring Boot\n- Experience with microservices architecture and REST APIs\n- Agile development methodologies\n- Design and implement scalable, efficient, and maintainable Java applications\n- Collaborate with cross-functional teams to define, design, and deliver new features\n- Solid experience with object-oriented design, data structures, and algorithms\n\nNice to have: Docker, Kubernetes, CI/CD, JUnit, Mockito, PostgreSQL\n",
+  "results": [
+    {
+      "label": "qwen3:8b",
+      "elapsedSec": 128,
+      "summary": "4+ years of experience building scalable healthcare applications using Java, Spring Boot, and microservices. Expertise in designing and implementing RESTful APIs, integrating with ...",
+      "companies": [
+        "Cerner",
+        "Optum",
+        "Healthgrades"
+      ],
+      "skillLines": [
+        "Programming Languages: Java",
+        "Backend Frameworks: Spring Boot",
+        "APIs & Integration: Microservices, RESTful APIs",
+        "Databases: PostgreSQL, SQL optimization",
+        "Cloud & DevOps: Docker, Kubernetes, CI/CD",
+        "Testing & Quality: JUnit, Mockito",
+        "Monitoring & Tools: Postman, logging, monitoring"
+      ],
+      "jobBullets": [
+        {
+          "title": "Cerner — Software Engineer",
+          "bullets": [
+            "Designed and implemented a Java microservice for claims processing using Spring Boot and RESTful APIs, improving data validation efficiency by 30%.",
+            "Collaborated with cross-functional teams to define and deliver new features, ensuring alignment with healthcare compliance standards.",
+            "Integrated PostgreSQL with microservices to optimize query performance and reduce latency by 25%.",
+            "Automated testing with JUnit and Mockito to ensure robustness of API endpoints and business logic."
+          ]
+        },
+        {
+          "title": "Optum — Software Developer",
+          "bullets": [
+            "Developed Java services for healthcare data exchange, leveraging Spring Boot and RESTful APIs to streamline data integration.",
+            "Optimized PostgreSQL queries to enhance performance and reduce database response times by 20%.",
+            "Implemented automated testing frameworks using JUnit and Mockito to ensure code quality and reduce regression risks.",
+            "Collaborated with QA and product teams to deliver features through Agile sprints, maintaining alignment with business requirements."
+          ]
+        },
+        {
+          "title": "Healthgrades — Junior Software Developer",
+          "bullets": [
+            "Developed Java-based microservices for patient data management, using Spring Boot for rapid application development.",
+            "Collaborated with cross-functional teams to design and implement RESTful APIs for healthcare data exchange.",
+            "Implemented unit tests using JUnit and Mockito to ensure code reliability and maintainability.",
+            "Supported Agile development practices and contributed to sprint planning and backlog refinement."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Healthcare Claims Processing Service",
+          "bullets": [
+            "Built a Spring Boot microservice for claims intake, validation, and status tracking, improving data validation efficiency by 30%.",
+            "Integrated PostgreSQL with the service to optimize query performance and reduce latency by 25%."
+          ]
+        },
+        {
+          "name": "Healthcare Data Integration Platform",
+          "bullets": [
+            "Designed and implemented a Java-based data integration platform using Spring Boot and RESTful APIs.",
+            "Optimized PostgreSQL queries to enhance performance and reduce database response times by 20%."
+          ]
+        }
+      ],
+      "metricBullets": [
+        "Designed and implemented a Java microservice for claims processing using Spring Boot and RESTful APIs, improving data validation efficiency by 30%.",
+        "Integrated PostgreSQL with microservices to optimize query performance and reduce latency by 25%.",
+        "Optimized PostgreSQL queries to enhance performance and reduce database response times by 20%."
+      ],
+      "metricCount": 3,
+      "totalBullets": 18
+    },
+    {
+      "label": "qwen2.5:14b",
+      "elapsedSec": 235,
+      "summary": "Polished 4+ years of experience Java Developer with expertise in designing and implementing scalable, efficient, and maintainable applications using Java and Spring Boot. Proven tr...",
+      "companies": [
+        "Cerner",
+        "Optum",
+        "Healthcare Innovations Inc"
+      ],
+      "skillLines": [
+        "Programming Languages: Java",
+        "Backend Frameworks: Spring Boot",
+        "APIs & Integration: Microservices, RESTful APIs",
+        "Databases: PostgreSQL, SQL optimization",
+        "Cloud & DevOps: Docker, Kubernetes, CI/CD",
+        "Testing & Quality: JUnit, Mockito",
+        "Monitoring & Tools: Postman, logging, monitoring"
+      ],
+      "jobBullets": [
+        {
+          "title": "Cerner — Software Engineer",
+          "bullets": [
+            "Implemented Java microservices for claims processing workflows using Spring Boot and REST APIs.",
+            "Collaborated with QA and product teams to deliver features through Agile sprints.",
+            "Optimized database queries in PostgreSQL to improve performance and scalability of healthcare applications.",
+            "Automated deployment pipelines using CI/CD tools, reducing manual intervention and improving release velocity."
+          ]
+        },
+        {
+          "title": "Optum — Software Developer",
+          "bullets": [
+            "Developed Java services and REST endpoints for healthcare data exchange.",
+            "Supported production releases and resolved defects in a cross-functional Agile team.",
+            "Integrated Docker containers to streamline development, testing, and deployment processes."
+          ]
+        },
+        {
+          "title": "Healthcare Innovations Inc — Junior Software Developer",
+          "bullets": [
+            "Contributed to the development of healthcare applications using Java and Spring Boot.",
+            "Participated in code reviews and pair programming sessions to enhance software quality."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Healthcare Claims Processing Service",
+          "bullets": [
+            "Built a Spring Boot microservice for claims intake, validation, and status tracking.",
+            "Integrated Docker containers to ensure consistent development and deployment environments."
+          ]
+        },
+        {
+          "name": "Patient Data Management System",
+          "bullets": [
+            "Developed RESTful APIs using Java and Spring Boot to manage patient data securely.",
+            "Implemented unit tests with JUnit and Mockito to validate the correctness of application logic."
+          ]
+        }
+      ],
+      "metricBullets": [],
+      "metricCount": 0,
+      "totalBullets": 11
+    }
+  ]
+}

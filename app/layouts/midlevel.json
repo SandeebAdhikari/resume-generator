@@ -94,7 +94,7 @@
         "format": "Title | Month YYYY - Month YYYY",
         "fontStyle": "italic optional"
       },
-      "bulletCount": "7-9 for current role, 5-7 for previous role, 3-5 for older role",
+      "bulletCount": "8-10 for current role, 5-8 for previous roles (minimum 5 per job)",
       "bulletMarker": "disc",
       "environmentLine": {
         "includeWhenUseful": true,
